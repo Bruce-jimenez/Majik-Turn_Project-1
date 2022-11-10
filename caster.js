@@ -26,7 +26,7 @@ const fightStart = () => {
             victor(this.innerHTML, golemSpells);
 
             if(rounds ==7){
-                 matchEnd(casterChoice, roundsLeft);
+                arenaResults(casterChoice, roundsLeft);
             }
         })
     })
@@ -131,46 +131,46 @@ const arenaResults = (casterChoice, roundsLeft) => {
         choice.style.display = "none";
     })
 
-    chooseMove.innerHTML = 'Game is Finished, Now lets see the results.... ';
+    choosenSpell.innerHTML = 'Game is Finished, Now lets see the results.... ';
 
     //Here is where a delay functon is going to be placed looking into it more
 
     roundsLeft.style.display = 'none';
 
         if(casterScore > golemScore){
-            result.style.fontSize = '3rem';
-            result.innerHTML = 'Caster has bested the Golem';
-            result.sylt.color = '#0560b5';
+            overallWinner.style.fontSize = '3rem';
+            overallWinner.innerHTML = 'Caster has bested the Golem';
+            overallWinner.sylt.color = '#0560b5';
 
             if(casterScore == 7){
-                result.style.fontSize = '3.25rem';
-                result.innerHTML = 'Caster has flawlessly sweeped the Golem!!!!!';
-                result.sylt.color = '#f24141';
+                overallWinner.style.fontSize = '3.25rem';
+                overallWinner.innerHTML = 'Caster has flawlessly sweeped the Golem!!!!!';
+                overallWinner.sylt.color = '#f24141';
             }
         } 
 
         else if(casterScore < golemScore){
-            result.style.fontSize = '1.75rem';
-            result.innerHTML = 'The Golem has defeated the Caster.';
-            result.style.color = '#03022e';
+            overallWinner.style.fontSize = '1.75rem';
+            overallWinner.innerHTML = 'The Golem has defeated the Caster.';
+            overallWinner.style.color = '#03022e';
             
             if(golemScore == 7){
-                result.style.fontSize = '2rem';
-                result.innerHTML = 'The Caster has been Wiped Out.';
-                result.style.color = '#2e0202';
+                overallWinner.style.fontSize = '2rem';
+                overallWinner.innerHTML = 'The Caster has been Wiped Out.';
+                overallWinner.style.color = '#2e0202';
             }
         }
 
         else{
-            result.style.fontSize = '2.5rem';
-            result.innerHTML = 'Both the Caster and Golem are Exhausted';
-            result.style.color = '#211d1c';
+            overallWinner.style.fontSize = '2.5rem';
+            overallWinner.innerHTML = 'Both the Caster and Golem are Exhausted';
+            overallWinner.style.color = '#211d1c';
 
         }
 
-        restartBtn.innerHTML = 'Lets try again';
-        restartBtn.style.display = 'flex';
-        restartBtn.addEventListener('click',() => {
+        tryAgain.innerHTML = 'Lets try again';
+        tryAgain.style.display = 'flex';
+        tryAgain.addEventListener('click',() => {
                 window.location.reload();
         })
 
