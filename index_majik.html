@@ -10,9 +10,33 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="formation.css">
     </head>
     <body>
+
+        <section class = "arena">
+        <div class = "Magik Turn"></div>
+
+<div class = "pointsEarned">
+        <div class = "playerPoints">
+            <h1>Magic Caster (You)</h1>
+            <p class = "token-Count">0</p>
+        </div>
+
+        <div class = "golemPoints">
+            <h1>Magic Golem</h1>
+            <p class = "Magic-Golem_tokens">0</p>
+        </div>
+
+</div>
+
+<div class = "roundsleft"> Round left till end: 7</div>
+
+<!--Want to add a each round winner alert similar to the one above-->
+
+<div class = "spellUsed">Which spell you are going to use?</div>
+
+<!--Speels to choose from to defeat teh golem/ the computer-->
         <div class="options">
             <button class="Electricity">Electricity</button>
             <button class="Void/Space">Void/Space</button>
@@ -20,10 +44,13 @@
             <button class="Fire">Fire</button>
             <button class="Earth">Earth</button>  
         </div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
+     
+ 
+    <div class = "match-Result"></div>
+
+    <button class = "restart">Another Match?</button>
+
+        </section>  
+        <script src="caster.js" async defer></script>
     </body>
 </html>
