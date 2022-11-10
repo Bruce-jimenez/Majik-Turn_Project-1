@@ -4,26 +4,26 @@ const arena = () => {
     let rounds = 0;
 
 const fightStart = () => {
-    const electricSpell = document.querySelector(".Electricity");
-    const voidSpaceSpell = document.querySelector(".Void/Space");
-    const waterSpell = document.querySelector(".Water");
-    const fireSpell = document.querySelector(".Fire");
-    const earthSpell = document.querySelector(".Earth");
+    const electricSpell = document.getElementsByClassName(".Electricity");
+    const voidSpaceSpell = document.getElementsByClassName(".Void/Space");
+    const waterSpell = document.getElementsByClassName(".Water");
+    const fireSpell = document.getElementsByClassName(".Fire");
+    const earthSpell = document.getElementsByClassName(".Earth");
     const casterChoice = [electricSpell, voidSpaceSpell, waterSpell, fireSpell, earthSpell];
     const golemChoice = ["Electricity", "Void/Space", "Water", "Fire", "Earth"]
 
 
-    casterChoice.forEach(choice => {
-        choice.addEventListener('click',function(){
+    casterChoice.forEach(options => {
+        options.addEventListener('click',function(){
             
-            const roundsLeft = document.querySelector('.roundsLeft');
+            const roundsLeft = document.getElementsByClassName('.roundsLeft');
             rounds++;;
-            roundsLeft.innerHTML = `Round left till end: ${7-rounds}`;
+            roundsLeft.innerText = `Round left till end: ${7-rounds}`;
 
             const spellCreation = Math.floor(Math.random()*5);       
             const golemSpells = golemChoice[spellCreation];
 
-            victor(this.innerHTML, golemSpells);
+            victor(this.innerText, golemSpells);
 
             if(rounds ==7){
                 arenaResults(casterChoice, roundsLeft);
@@ -35,9 +35,9 @@ const fightStart = () => {
 
 const victor = (caster, golem) => {
 
-    const result = document.querySelector('.match-Result');
-    const casterScoreBoard = document.querySelector('.token-Count');
-    const golemScoreBoard = document.querySelector('.Magic-Golem_tokens');
+    const result = document.getElementsByClassName('.match-Result');
+    const casterScoreBoard = document.getElementsByClassName('.token-Count');
+    const golemScoreBoard = document.getElementsByClassName('.Magic-Golem_tokens');
     
     caster = caster.toLowerCase();
     golem = golem.toLowerCase();
@@ -123,9 +123,9 @@ const victor = (caster, golem) => {
 
 const arenaResults = (casterChoice, roundsLeft) => {
 
-    const choosenSpell = document.querySelector('.spellUsed');
-    const overallWinner = document.querySelector('.match-Result');
-    const tryAgain = document.querySelector('.restart');
+    const choosenSpell = document.getElementsByClassName('.spellUsed');
+    const overallWinner = document.getElementsByClassName('.match-Result');
+    const tryAgain = document.getElementsByClassName('.restart');
 
     casterChoice.forEach(choice =>{
         choice.style.display = "none";
@@ -139,36 +139,36 @@ const arenaResults = (casterChoice, roundsLeft) => {
 
         if(casterScore > golemScore){
             overallWinner.style.fontSize = '3rem';
-            overallWinner.innerHTML = 'Caster has bested the Golem';
+            overallWinner.innerText = 'Caster has bested the Golem';
             overallWinner.sylt.color = '#0560b5';
 
             if(casterScore == 7){
                 overallWinner.style.fontSize = '3.25rem';
-                overallWinner.innerHTML = 'Caster has flawlessly sweeped the Golem!!!!!';
+                overallWinner.innerText = 'Caster has flawlessly sweeped the Golem!!!!!';
                 overallWinner.sylt.color = '#f24141';
             }
         } 
 
         else if(casterScore < golemScore){
             overallWinner.style.fontSize = '1.75rem';
-            overallWinner.innerHTML = 'The Golem has defeated the Caster.';
+            overallWinner.innerText = 'The Golem has defeated the Caster.';
             overallWinner.style.color = '#03022e';
             
             if(golemScore == 7){
                 overallWinner.style.fontSize = '2rem';
-                overallWinner.innerHTML = 'The Caster has been Wiped Out.';
+                overallWinner.innerText = 'The Caster has been Wiped Out.';
                 overallWinner.style.color = '#2e0202';
             }
         }
 
         else{
             overallWinner.style.fontSize = '2.5rem';
-            overallWinner.innerHTML = 'Both the Caster and Golem are Exhausted';
+            overallWinner.innerText = 'Both the Caster and Golem are Exhausted';
             overallWinner.style.color = '#211d1c';
 
         }
 
-        tryAgain.innerHTML = 'Lets try again';
+        tryAgain.innerText = 'Lets try again';
         tryAgain.style.display = 'flex';
         tryAgain.addEventListener('click',() => {
                 window.location.reload();
