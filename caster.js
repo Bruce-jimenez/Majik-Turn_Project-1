@@ -4,20 +4,21 @@ const arena = () => {
     let rounds = 0;
 
 const fightStart = () => {
-    const electricSpell = document.getElementsByClassName(".Electricity");
-    const voidSpaceSpell = document.getElementsByClassName(".Void/Space");
-    const waterSpell = document.getElementsByClassName(".Water");
-    const fireSpell = document.getElementsByClassName(".Fire");
-    const earthSpell = document.getElementsByClassName(".Earth");
+    const electricSpell = document.getElementsByClassName(".Electricity")
+    const voidSpaceSpell = document.getElementsByClassName(".Void-Space")
+    const waterSpell = document.getElementsByClassName(".Water")
+    const fireSpell = document.getElementsByClassName(".Fire")
+    const earthSpell = document.getElementsByClassName(".Earth")
     const casterChoice = [electricSpell, voidSpaceSpell, waterSpell, fireSpell, earthSpell];
     const golemChoice = ["Electricity", "Void/Space", "Water", "Fire", "Earth"]
 
 
-    casterChoice.forEach(options => {
-        options.addEventListener('click',function(){
+//     casterChoice[i].forEach(choice => {
+        for  ( var i = casterChoice[0]; i < casterChoice.length; i++){
+        options.addEventListener('click', function() {
             
             const roundsLeft = document.getElementsByClassName('.roundsLeft');
-            rounds++;;
+            rounds++;
             roundsLeft.innerText = `Round left till end: ${7-rounds}`;
 
             const spellCreation = Math.floor(Math.random()*5);       
@@ -25,11 +26,11 @@ const fightStart = () => {
 
             victor(this.innerText, golemSpells);
 
-            if(rounds ==7){
+            if(rounds == 7){
                 arenaResults(casterChoice, roundsLeft);
             }
         })
-    })
+}
 }
 
 
@@ -65,7 +66,7 @@ const victor = (caster, golem) => {
         }
 
 
-    else if(caster == 'Void/Space'){
+    else if(caster == 'Void-Space'){
         if(golem == 'Earth' || golem == 'Electricity'){
                 result.textContent = "Golem Wins";
                 golemScore++;
@@ -80,7 +81,7 @@ const victor = (caster, golem) => {
 
 
     else if(caster == 'Water'){
-        if(golem == 'Electricity' || golem == 'Void/Space'){
+        if(golem == 'Electricity' || golem == 'Void-Space'){
                     result.textContent = "Golem Wins";
                     golemScore++;
                     golemScoreBoard.textContent = golemScore;
@@ -94,7 +95,7 @@ const victor = (caster, golem) => {
 
 
     else if(caster == 'Fire'){
-        if(golem == 'Water' || golem == 'Void/Space'){
+        if(golem == 'Water' || golem == 'Void-Space'){
                 result.textContent = "Golem Wins";
                 golemScore++;
                 golemScoreBoard.textContent = golemScore;
@@ -176,9 +177,9 @@ const arenaResults = (casterChoice, roundsLeft) => {
 
 }
 
-        fightStart();
+     fightStart();
 
 
 }
 
-                        arena();
+arena();
