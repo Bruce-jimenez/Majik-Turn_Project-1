@@ -39,6 +39,10 @@
     margin-top: 1 rem;
 }
 
+.casterSpellImg, .golemSpellImg {
+border: 1px solidblack;
+
+}
 
 .options{
     display: flex;
@@ -46,7 +50,7 @@
     justify-content: space-evenly;
     margin-top: 2rem;
 }
-.Electricity, .Void-Space, .Water, .Fire, .Earth{
+.Electricity, .VoidSpace, .Water, .Fire, .Earth{
     padding: 0.8rem;
     width:100px;
     border-radius: 10px;
