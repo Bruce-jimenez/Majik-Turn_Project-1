@@ -7,6 +7,9 @@ It is my first large project that I have came up by myself and gotten help from 
 
 This was inspired by a simple game of rock, paper, scizzors, that me and my cousin used to play and made it into our own version of it. It was a lot more complicated than this in terms or game rules and gameplay. However it was a good time all around so i somewhat want to relate to it somehow. In addition to that I just like fanatsy and sci-fi genre.
 
+## Gameplay 
+
+This is a more developed version of rock paper scizzors. It has more options to chose from and instead of use rock, paper, or scizzors we use magic. The spells you can cast is Electricity, Void/Space, Water, Fire, and lastly Earth. The effectiveness chart will be shown at a later date (Must be drawn/transcribed into pc )
 
 ## The Digital Structure of the Project
 
@@ -23,15 +26,14 @@ First off the terms of Importance of each file goes in order in my opinion is ht
 1. First would be a selection option (Menu) to make it a duel (Two player game) or a Golem vs Caster( Computer vs Player)
 2. Visuals such as animations on each spell and a soudn effect on a hover on each button all vary with each other.
 
-## Gameplay 
-
-This is a more developed version of rock paper scizzors. It has more options to chose from and instead of use rock, paper, or scizzors we use magic. The spells you can cast is Electricity, Void/Space, Water, Fire, and lastly Earth. The effectiveness chart will be shown at a later date (Must be drawn/transcribed into pc )
+## Link to my page
+https://bruce-jimenez.github.io/Majik-Turn_Project-1/
 
 ## Credits
 
 Inspiration + basic understanding: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/
 Help with bugs in Javascript folder: https://stackoverflow.com/
-Any other errors such as type error or undected error in the browser console it was resolved through google or through Kasper and Tishana.
+Any other errors such as type error or undedected error in the browser console it was resolved through google or through Kasper and Tishana.
 
 
 ## Date of First Operational Test Creation and Name of Creator
