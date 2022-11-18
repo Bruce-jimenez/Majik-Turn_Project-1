@@ -43,8 +43,6 @@ const victor = (caster, golem) => {
     const casterScoreBoard = document.querySelector('.token-Count');
     const golemScoreBoard = document.querySelector('.Magic-Golem_tokens');
     
-    // caster = caster.toLowerCase();
-    // golem = golem.toLowerCase();
 
     if(caster == golem){
         result.textContent = "Match Tied"
