@@ -15,7 +15,7 @@ const fightStart = () => {
 
 
         for  ( let i = 0; i < casterChoice.length; i++){
-            // console.log(casterChoice)
+            
         casterChoice[i].addEventListener('click', function() {
             console.log(casterChoice[i])
             const roundsLeft = document.querySelector('.roundsleft');
@@ -196,4 +196,3 @@ const arenaResults = (casterChoice, roundsLeft) => {
 }
 
 arena();
-// fightStart();
